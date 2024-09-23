@@ -9,6 +9,7 @@
 html {
 	height: 100%;
 	scroll-behavior: smooth;
+    
 }
 
 body, html {
@@ -20,33 +21,55 @@ body, html {
 /* Общие стили */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    background-color: #ffffff; /* светлый фон */
+    color: #000000; /* черный текст */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
-    margin: 20px;
-    max-width: 100%;
-    overflow-x: auto;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 1370px;
 }
 
 h1 {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 18px;
+    }
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+            padding: 10px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 12px;
+            padding: 8px;
+        }
+    }
 }
 
-th, td {
-    padding: 10px;
-    text-align: left;
-    border: 1px solid black;
-    font-size: 16px;
+td.correct {
+    background-color: lightgreen;
 }
 
 input {
@@ -58,70 +81,86 @@ input {
     width: 80%; /* Процентная ширина для мобильных */
     max-width: 120px;
     font-size: 16px;
-    font-family: Arial, sans-serif;
-}
 
-td.correct {
-    background-color: lightgreen;
-}
-
-/* Адаптация для мобильных устройств */
-@media (max-width: 768px) {
-    table, th, td {
-        font-size: 14px;
-    }
-
-    input {
+    @media (max-width: 768px) {
         width: 100px;
         font-size: 14px;
     }
 
-    h1 {
-        font-size: 20px;
-    }
-
-    .container {
-        padding: 10px;
-    }
-}
-
-/* Адаптация для очень маленьких экранов (мобильные телефоны) */
-@media (max-width: 480px) {
-    table, th, td {
-        font-size: 12px;
-        padding: 8px;
-    }
-
-    input {
+    @media (max-width: 480px) {
         width: 80px;
         font-size: 12px;
     }
+}
 
-    h1 {
-        font-size: 18px;
+nav {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly; /* Выравнивание по краям */
+    align-items: center; /* Центрирование по вертикали */
+
+    a {
+        margin-right: 15px;
+        text-decoration: none;
+        color: #333; /* цвет ссылок в светлом режиме */
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e5e5e5;
+    text-align: center;
+}
+
+.dark-mode {
+    background-color: #121212; /* темный фон */
+    color: #ffffff; /* белый текст */
+
+    nav {
+        background-color: #1e1e1e;
+
+        a {
+            color: #bb86fc; /* светлый цвет для ссылок в темном режиме */
+
+            &:hover {
+                text-decoration: underline;
+                color: #ffffff; /* цвет ссылок при наведении */
+            }
+        }
     }
 
-    .container {
-        padding: 5px;
+    th {
+        background-color: #333333;
+    }
+
+    footer {
+        background-color: #1e1e1e;
+    }
+
+    input {
+        background-color: #333333; /* темный фон для инпута */
+        color: #ffffff; /* белый текст для инпута */
+        border: 1px solid #555; /* более светлая рамка */
     }
 }
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
 
-td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-    vertical-align: middle; /* Центрирование содержимого по вертикали */
-}
+#toggle-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 
-input {
-    width: 50px; /* Устанавливаем ширину для инпутов */
-    text-align: center; /* Центрирование текста в инпуте */
-}
-
-.correct {
-    background-color: #d4edda; /* Зеленый фон для правильного ответа */
+    &:hover {
+        background-color: #0056b3;
+    }
 }
