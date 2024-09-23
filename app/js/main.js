@@ -10,44 +10,54 @@
 		
 			for (let i = 1; i < rows.length; i++) {
 				const cell = rows[i].getElementsByTagName('td')[0];
-				let words = cell.innerText.split(' '); // Разделяем строку на слова
+				let words = cell.innerText.split(/\s+/); // Разделяем строку на слова по пробелам или любым разделителям
 		
-				// Выбираем случайное слово
-				const randomIndex = Math.floor(Math.random() * words.length);
-				const correctWord = words[randomIndex];
+				// Проверка, если в ячейке есть хотя бы одно слово
+				if (words.length > 1) {
+					// Выбираем случайное слово
+					const randomIndex = Math.floor(Math.random() * words.length);
+					const correctWord = words[randomIndex];
 		
-				// Создаем новый input элемент
-				const input = document.createElement('input');
-				input.type = 'text';
-				input.size = correctWord.length;
-				input.placeholder = ' '.repeat(correctWord.length); // Прочерки
-				input.dataset.correctWord = correctWord;
+					// Создаем новый input элемент
+					const input = document.createElement('input');
+					input.type = 'text';
+					input.size = correctWord.length;
+					input.placeholder = '_'.repeat(correctWord.length); // Прочерки
+					input.dataset.correctWord = correctWord;
 		
-				// Очищаем содержимое ячейки и вставляем каждое слово
-				cell.innerHTML = ''; // Очищаем ячейку
+					// Добавляем атрибуты для мобильных устройств
+					input.setAttribute('autocomplete', 'off');
+					input.setAttribute('autocorrect', 'off');
+					input.setAttribute('spellcheck', 'false');
 		
-				// Вставляем слова обратно, заменяя одно случайное слово на инпут
-				words.forEach((word, index) => {
-					if (index === randomIndex) {
-						cell.appendChild(input); // Заменяем выбранное слово на input
-					} else {
-						const textNode = document.createTextNode(word + ' '); // Добавляем текст
-						cell.appendChild(textNode);
-					}
-				});
+					// Очищаем содержимое ячейки и вставляем слова
+					cell.innerHTML = ''; // Очищаем ячейку
 		
-				// Добавляем обработчик для проверки введённого слова
-				input.addEventListener('input', function() {
-					if (input.value === input.dataset.correctWord) {
-						// Подсвечиваем всю ячейку зелёным
-						cell.classList.add('correct');
-						input.disabled = true; // Отключаем input после правильного ввода
-					} else {
-						cell.classList.remove('correct');
-					}
-				});
+					// Вставляем слова обратно, заменяя одно случайное слово на input
+					words.forEach((word, index) => {
+						if (index === randomIndex) {
+							cell.appendChild(input); // Заменяем выбранное слово на input
+						} else {
+							const textNode = document.createTextNode(word + ' '); // Добавляем текст
+							cell.appendChild(textNode);
+						}
+					});
+		
+					// Добавляем обработчик для проверки введённого слова
+					input.addEventListener('input', function() {
+						if (input.value === input.dataset.correctWord) {
+							cell.classList.add('correct');
+							input.disabled = true; // Отключаем input после правильного ввода
+						} else {
+							cell.classList.remove('correct');
+						}
+					});
+				}
 			}
 		};
+		
+		
+		
 		
 		
     
