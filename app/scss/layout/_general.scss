@@ -55,7 +55,8 @@ input {
     background: none;
     outline: none;
     text-align: center;
-    width: 120px; /* Увеличим ширину для мобильных */
+    width: 80%; /* Процентная ширина для мобильных */
+    max-width: 120px;
     font-size: 16px;
     font-family: Arial, sans-serif;
 }
@@ -69,9 +70,9 @@ td.correct {
     table, th, td {
         font-size: 14px;
     }
-    
+
     input {
-        width: 80px;
+        width: 100px;
         font-size: 14px;
     }
 
@@ -79,13 +80,8 @@ td.correct {
         font-size: 20px;
     }
 
-    /* Прокрутка для таблицы на маленьких экранах */
     .container {
         padding: 10px;
-    }
-
-    table {
-        font-size: 14px;
     }
 }
 
@@ -97,7 +93,7 @@ td.correct {
     }
 
     input {
-        width: 70px;
+        width: 80px;
         font-size: 12px;
     }
 
@@ -105,31 +101,7 @@ td.correct {
         font-size: 18px;
     }
 
-    /* Убираем лишние отступы на маленьких экранах */
     .container {
         padding: 5px;
-    }
-}
-/* Увеличиваем размер инпутов на мобильных */
-@media (max-width: 768px) {
-    input {
-        width: 100px;
-        font-size: 16px;
-    }
-
-    td {
-        font-size: 14px;
-    }
-}
-
-/* Для очень маленьких экранов */
-@media (max-width: 480px) {
-    input {
-        width: 80px;
-        font-size: 14px;
-    }
-
-    td {
-        font-size: 12px;
     }
 }
