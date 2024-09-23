@@ -105,3 +105,23 @@ td.correct {
         padding: 5px;
     }
 }
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    vertical-align: middle; /* Центрирование содержимого по вертикали */
+}
+
+input {
+    width: 50px; /* Устанавливаем ширину для инпутов */
+    text-align: center; /* Центрирование текста в инпуте */
+}
+
+.correct {
+    background-color: #d4edda; /* Зеленый фон для правильного ответа */
+}
