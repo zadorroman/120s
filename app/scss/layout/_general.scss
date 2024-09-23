@@ -110,3 +110,26 @@ td.correct {
         padding: 5px;
     }
 }
+/* Увеличиваем размер инпутов на мобильных */
+@media (max-width: 768px) {
+    input {
+        width: 100px;
+        font-size: 16px;
+    }
+
+    td {
+        font-size: 14px;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+    input {
+        width: 80px;
+        font-size: 14px;
+    }
+
+    td {
+        font-size: 12px;
+    }
+}
