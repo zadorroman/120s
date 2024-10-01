@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Starter">
+	<meta name="author" content="Admin">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>Gemeinsam NVV</title>
+
+	<link rel="icon" href="images/favicon.png">
+
+	<link rel="stylesheet" href="css/styles.min.css">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+    <nav class="navig">
+        <ul class="navig-container" >
+            <li>
+                <a href="index.html">Zurück</a>
+            </li>
+            <li>            
+                <button id="toggle-button">Dunkelmodus</button>
+            </li>
+            <li><label class="switch">
+                <input type="checkbox" id="shuffle-toggle">
+                 <span class="slider"></span>
+                 <span class="switch-label"></span>
+                </label>
+            </li>
+        </ul>
+    </nav>
+	<div class="container">
+        <h1>Gemeinsam NVV</h1>
+        <table id="wordTable">
+            <thead>
+                <tr>
+                    <th>Deutsch Ausdruck</th>
+                    <th>Bedeutung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Abläufe dokumentieren</td>
+                    <td>Prozesse aufschreiben</td>
+                </tr>
+                <tr>
+                    <td>Abschied nehmen von</td>
+                    <td>sich verabschieden</td>
+                </tr>
+                <tr>
+                    <td>Abstand halten von</td>
+                    <td>entfernt bleiben</td>
+                </tr>
+                <tr>
+                    <td>Anerkennung genießen</td>
+                    <td>anerkannt sein</td>
+                </tr>
+                <tr>
+                    <td>Angst haben vor</td>
+                    <td>sich fürchten</td>
+                </tr>
+                <tr>
+                    <td>Angst machen</td>
+                    <td>erschrecken</td>
+                </tr>
+                <tr>
+                    <td>Anstrengungen unternehmen für</td>
+                    <td>sich anstrengen</td>
+                </tr>
+                <tr>
+                    <td>Arbeit erledigen</td>
+                    <td>fertig arbeiten</td>
+                </tr>
+                <tr>
+                    <td>auf der Suche sein nach</td>
+                    <td>suchen</td>
+                </tr>
+                <tr>
+                    <td>aufs Spiel setzen</td>
+                    <td>riskieren</td>
+                </tr>
+                <tr>
+                    <td>aus dem Weg gehen</td>
+                    <td>meiden</td>
+                </tr>
+                <tr>
+                    <td>außer Frage stehen</td>
+                    <td>selbstverständlich sein</td>
+                </tr>
+                <tr>
+                    <td>Beschäftigung finden in</td>
+                    <td>arbeiten</td>
+                </tr>
+                <tr>
+                    <td>Bescheid bekommen</td>
+                    <td>informiert werden</td>
+                </tr>
+                <tr>
+                    <td>Bescheid geben</td>
+                    <td>schriftlich/mündlich informieren</td>
+                </tr>
+                <tr>
+                    <td>Bescheid sagen</td>
+                    <td>mündlich informieren</td>
+                </tr>
+                <tr>
+                    <td>Bescheid wissen über</td>
+                    <td>informiert sein</td>
+                </tr>
+                <tr>
+                    <td>Bezug nehmen auf</td>
+                    <td>sich beziehen auf</td>
+                </tr>
+                <tr>
+                    <td>den Bedarf decken an</td>
+                    <td>gerecht werden</td>
+                </tr>
+                <tr>
+                    <td>den Umsatz steigern</td>
+                    <td>mehr verkaufen</td>
+                </tr>
+                <tr>
+                    <td>die Schuld geben an</td>
+                    <td>beschuldigen</td>
+                </tr>
+                <tr>
+                    <td>ein Angebot ablehnen</td>
+                    <td>zu etwas Nein sagen</td>
+                </tr>
+                <tr>
+                    <td>ein Angebot annehmen</td>
+                    <td>zu etwas Ja sagen</td>
+                </tr>
+                <tr>
+                    <td>ein Gespräch führen mit/über</td>
+                    <td>sprechen</td>
+                </tr>
+                <tr>
+                    <td>ein gutes/schlechtes Leben führen</td>
+                    <td>gut/schlecht leben</td>
+                </tr>
+                <tr>
+                    <td>ein Missverständnis klären</td>
+                    <td>aufklären/klarstellen</td>
+                </tr>
+                <tr>
+                    <td>ein Projekt abschließen</td>
+                    <td>Arbeit fertigstellen</td>
+                </tr>
+                <tr>
+                    <td>ein Recht haben auf</td>
+                    <td>berechtigt sein</td>
+                </tr>
+                <tr>
+                    <td>ein Unternehmen leiten</td>
+                    <td>eine Firma führen</td>
+                </tr>
+                <tr>
+                    <td>ein Ziel erreichen</td>
+                    <td>erfolgreich sein</td>
+                </tr>
+                <tr>
+                    <td>ein/zum Ziel setzen</td>
+                    <td>planen</td>
+                </tr>
+                <tr>
+                    <td>ein Zimmer buchen</td>
+                    <td>reservieren</td>
+                </tr>
+                <tr>
+                    <td>eine Antwort geben</td>
+                    <td>antworten</td>
+                </tr>
+                <tr>
+                    <td>eine Aufgabe übernehmen</td>
+                    <td>sich kümmern um/verantwortlich sein</td>
+                </tr>
+                <tr>
+                    <td>eine Ausbildung machen</td>
+                    <td>einen Beruf lernen</td>
+                </tr>
+                <tr>
+                    <td>eine Entscheidung treffen</td>
+                    <td>sich entscheiden</td>
+                </tr>
+                <tr>
+                    <td>eine Frage stellen</td>
+                    <td>fragen</td>
+                </tr>
+                <tr>
+                    <td>eine Garantie geben</td>
+                    <td>garantieren</td>
+                </tr>
+                <tr>
+                    <td>eine Idee haben</td>
+                    <td>sich etwas ausdenken</td>
+                </tr>
+                <tr>
+                    <td>eine Information für sich behalten</td>
+                    <td>schweigen</td>
+                </tr>
+                <tr>
+                    <td>eine Prüfung ablegen</td>
+                    <td>geprüft werden</td>
+                </tr>
+                <tr>
+                    <td>eine Rechnung stellen</td>
+                    <td>berechnen</td>
+                </tr>
+                <tr>
+                    <td>eine Rolle spielen für</td>
+                    <td>wichtig sein</td>
+                </tr>
+                <tr>
+                    <td>eine Straftat begehen</td>
+                    <td>straffällig sein</td>
+                </tr>
+                <tr>
+                    <td>einen Antrag stellen bei auf</td>
+                    <td>beantragen</td>
+                </tr>
+                    <tr>
+                        <td>einen Beruf ausüben</td>
+                        <td>arbeiten</td>
+                    </tr>
+                    <tr>
+                        <td>einen Beruf ergreifen</td>
+                        <td>anfangen zu arbeiten</td>
+                    </tr>
+                    <tr>
+                        <td>einen Eindruck gewinnen von</td>
+                        <td>sich etwas vorstellen können</td>
+                    </tr>
+                    <tr>
+                        <td>einen Entschluss fassen</td>
+                        <td>sich entschließen</td>
+                    </tr>
+                    <tr>
+                        <td>einen Fehler beheben</td>
+                        <td>ein Problem lösen</td>
+                    </tr>
+                    <tr>
+                        <td>einen Fehler machen</td>
+                        <td>etwas falsch machen</td>
+                    </tr>
+                    <tr>
+                        <td>einen Fehler verzeihen</td>
+                        <td>vergeben</td>
+                    </tr>
+                    <tr>
+                        <td>einen Gefallen tun</td>
+                        <td>entgegenkommen, etwas Gutes tun</td>
+                    </tr>
+                    <tr>
+                        <td>einen g/s Eindruck haben von</td>
+                        <td>etwas denken über</td>
+                    </tr>
+                    <tr>
+                        <td>einen g/s Eindruck hinterlassen bei</td>
+                        <td>(nicht) überzeugend wirken auf</td>
+                    </tr>
+                    <tr>
+                        <td>einen g/s Eindruck machen auf</td>
+                        <td>in einem guten/schlechten Zustand erscheinen</td>
+                    </tr>
+                    <tr>
+                        <td>einen Hinweis geben</td>
+                        <td>hinweisen</td>
+                    </tr>
+                    <tr>
+                        <td>einen Rabatt geben</td>
+                        <td>reduzieren</td>
+                    </tr>
+                    <tr>
+                        <td>einen Rat geben</td>
+                        <td>raten</td>
+                    </tr>
+                    <tr>
+                        <td>einen Sinn ergeben/machen</td>
+                        <td>sinnvoll sein</td>
+                    </tr>
+                    <tr>
+                        <td>einen Termin vereinbaren</td>
+                        <td>sich verabreden</td>
+                    </tr>
+                    <tr>
+                        <td>einen Tipp geben</td>
+                        <td>raten</td>
+                    </tr>
+                    <tr>
+                        <td>einen Traum haben</td>
+                        <td>träumen</td>
+                    </tr>
+                    <tr>
+                        <td>einen Traum verwirklichen</td>
+                        <td>realisieren</td>
+                    </tr>
+                    <tr>
+                        <td>einen Vergleich anstellen mit</td>
+                        <td>vergleichen</td>
+                    </tr>
+                    <tr>
+                        <td>einen Vorschlag machen</td>
+                        <td>vorschlagen</td>
+                    </tr>
+                    <tr>
+                        <td>einen Wunsch abschlagen</td>
+                        <td>Nein sagen</td>
+                    </tr>
+                    <tr>
+                        <td>einen Wunsch erfüllen</td>
+                        <td>Ja sagen</td>
+                    </tr>
+                    <tr>
+                        <td>einen Zusammenhang herstellen zwischen</td>
+                        <td>und... hängt zusammen</td>
+                    </tr>
+                    <tr>
+                        <td>einen Prüfung unterziehen</td>
+                        <td>geprüft werden</td>
+                    </tr>
+                    <tr>
+                        <td>Erfahrung sammeln</td>
+                        <td>vieles lernen</td>
+                    </tr>
+                    <tr>
+                        <td>Fragen stellen</td>
+                        <td>fragen</td>
+                    </tr>
+                    <tr>
+                        <td>Freundschaft schließen mit</td>
+                        <td>sich anfreunden</td>
+                    </tr>
+                    <tr>
+                        <td>Grund nennen für</td>
+                        <td>begründen</td>
+                    </tr>
+                    <tr>
+                        <td>Hilfe brauchen/benötigen bei</td>
+                        <td>hilfsbedürftig sein</td>
+                    </tr>
+                    <tr>
+                        <td>Hilfe leisten</td>
+                        <td>helfen</td>
+                    </tr>
+                    <tr>
+                        <td>in Anspruch nehmen</td>
+                        <td>beanspruchen</td>
+                    </tr>
+                    <tr>
+                        <td>in der Lage sein</td>
+                        <td>fähig sein</td>
+                    </tr>
+                    <tr>
+                        <td>in Erfüllung gehen</td>
+                        <td>sich erfüllen</td>
+                    </tr>
+                    <tr>
+                        <td>in Frage kommen</td>
+                        <td>möglich sein</td>
+                    </tr>
+                    <tr>
+                        <td>in Kauf nehmen</td>
+                        <td>akzeptieren</td>
+                    </tr>
+                    <tr>
+                        <td>in Rente gehen</td>
+                        <td>pensioniert werden</td>
+                    </tr>
+                    <tr>
+                        <td>in Schutz nehmen vor</td>
+                        <td>beschützen</td>
+                    </tr>
+                    <tr>
+                        <td>in Schwierigkeiten kommen</td>
+                        <td>Probleme bekommen</td>
+                    </tr>
+                    <tr>
+                        <td>in Schwierigkeiten sein</td>
+                        <td>Probleme haben</td>
+                    </tr>
+                    <tr>
+                        <td>in Sicherheit bringen</td>
+                        <td>retten</td>
+                    </tr>
+                    <tr>
+                        <td>Karriere machen</td>
+                        <td>erfolgreich sein</td>
+                    </tr>
+                    <tr>
+                        <td>Kontakte knüpfen mit</td>
+                        <td>Leute kennenlernen</td>
+                    </tr>
+                    <tr>
+                        <td>Kosten tragen</td>
+                        <td>bezahlen</td>
+                    </tr>
+                    <tr>
+                        <td>Kritik üben an</td>
+                        <td>kritisieren</td>
+                    </tr>
+                    <tr>
+                        <td>Maßnahmen ergreifen für</td>
+                        <td>etwas tun/tätig werden</td>
+                    </tr>
+                    <tr>
+                        <td>Neugierde wecken für</td>
+                        <td>neugierig machen</td>
+                    </tr>
+                    <tr>
+                        <td>Notizen machen</td>
+                        <td>aufschreiben</td>
+                    </tr>
+                    <tr>
+                        <td>Opfer bringen</td>
+                        <td>opfern</td>
+                    </tr>
+                    <tr>
+                        <td>Rat suchen bei</td>
+                        <td>um Hilfe fragen</td>
+                    </tr>
+                    <tr>
+                        <td>Recht haben</td>
+                        <td>sich nicht irren</td>
+                    </tr>
+                    <tr>
+                        <td>Respekt haben vor</td>
+                        <td>respektieren</td>
+                    </tr>
+                    <tr>
+                        <td>Rücksicht nehmen auf</td>
+                        <td>bedacht sein</td>
+                    </tr>
+                    <tr>
+                        <td>Ruhe bewahren</td>
+                        <td>ruhig bleiben</td>
+                    </tr>
+                    <tr>
+                        <td>Schluss machen mit</td>
+                        <td>beenden</td>
+                    </tr>
+                    <tr>
+                        <td>Schwierigkeiten bereiten</td>
+                        <td>Probleme machen</td>
+                    </tr>
+                    <tr>
+                        <td>sein Wort geben</td>
+                        <td>versprechen</td>
+                    </tr>
+                    <tr>
+                        <td>seine Hilfe anbieten</td>
+                        <td>gerne helfen</td>
+                    </tr>
+                    <tr>
+                        <td>sich Gedanken machen über</td>
+                        <td>nachdenken über</td>
+                    </tr>
+                    <tr>
+                        <td>sich Mühe geben bei/mit</td>
+                        <td>sich bemühen</td>
+                    </tr>
+                    <tr>
+                        <td>sich Sorgen machen über</td>
+                        <td>sich sorgen</td>
+                    </tr>
+                    <tr>
+                        <td>Überstunden abbauen</td>
+                        <td>weniger arbeiten</td>
+                    </tr>
+                    <tr>
+                        <td>Überstunden machen</td>
+                        <td>mehr arbeiten</td>
+                    </tr>
+                    <tr>
+                        <td>um Erlaubnis fragen</td>
+                        <td>bitten, etwas tun zu dürfen</td>
+                    </tr>
+                    <tr>
+                        <td>Unterlagen erstellen</td>
+                        <td>etwas schreiben/zusammensuchen</td>
+                    </tr>
+                    <tr>
+                        <td>Verantwortung tragen für</td>
+                        <td>verantwortlich sein</td>
+                    </tr>
+                    <tr>
+                        <td>Verantwortung übernehmen für</td>
+                        <td>die Konsequenzen tragen</td>
+                    </tr>
+                    <tr>
+                        <td>Verständnis haben für</td>
+                        <td>verstehen</td>
+                    </tr>
+                    <tr>
+                        <td>Verständnis zeigen für</td>
+                        <td>verstehen</td>
+                    </tr>
+                    <tr>
+                        <td>Vertrauen genießen bei</td>
+                        <td>vertrauen</td>
+                    </tr>
+                    <tr>
+                        <td>Vertrauen missbrauchen</td>
+                        <td>enttäuschen</td>
+                    </tr>
+                    <tr>
+                        <td>Vorbereitungen treffen für</td>
+                        <td>vorbereiten</td>
+                    </tr>
+                    <tr>
+                        <td>Ware umtauschen</td>
+                        <td>zurückgeben/wechseln</td>
+                    </tr>
+                    <tr>
+                        <td>Zeit haben für</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Zeit verlieren</td>
+                        <td>Zeit vergeuden</td>
+                    </tr>
+                    <tr>
+                        <td>zu einem Ergebnis kommen</td>
+                        <td>abschließen</td>
+                    </tr>
+                    <tr>
+                        <td>zu Ende bringen</td>
+                        <td>beenden/fertig stellen</td>
+                    </tr>
+                    <tr>
+                        <td>zu Wort kommen</td>
+                        <td>sprechen dürfen</td>
+                    </tr>
+                    <tr>
+                        <td>zum Abschluss bringen</td>
+                        <td>abschließen</td>
+                    </tr>
+                    <tr>
+                        <td>zum Ende kommen</td>
+                        <td>beenden</td>
+                    </tr>
+                    <tr>
+                        <td>zur Auswahl stehen</td>
+                        <td>infrage kommen/angeboten werden</td>
+                    </tr>
+                    <tr>
+                        <td>zur Folge haben</td>
+                        <td>folgen/resultieren</td>
+                    </tr>
+                    <tr>
+                        <td>zur Rede stellen</td>
+                        <td>über ein Problem reden</td>
+                    </tr>
+                    <tr>
+                        <td>zur Ruhe kommen</td>
+                        <td>ruhig werden</td>
+                    </tr>
+                    <tr>
+                        <td>zur Verantwortung ziehen für</td>
+                        <td>zurechtweisen/bestrafen</td>
+                    </tr>
+                    <tr>
+                        <td>zur Verfügung stehen für</td>
+                        <td>frei/verfügbar sein</td>
+                    </tr>
+            </tbody>
+        </table>
+        <footer>
+            <p>&copy; <a href="https://t.me/shur_shun">shur_shun</a> .</p>
+        </footer>
+    </div>
+
+	<script src="js/main.min.js"></script>
+</body>
+</html>
