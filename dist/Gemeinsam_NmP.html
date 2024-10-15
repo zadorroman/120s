@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Starter">
+	<meta name="author" content="Admin">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>Gemeinsam NmP</title>
+
+	<link rel="icon" href="images/favicon.png">
+
+	<link rel="stylesheet" href="css/styles.min.css">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+    <nav class="navig">
+        <ul class="navig-container" >
+            <li>
+                <a href="index.html">Zurück</a>
+            </li>
+            <li>            
+                <button id="toggle-button">Dunkelmodus</button>
+            </li>
+            <li><label class="switch">
+                <input type="checkbox" id="shuffle-toggle">
+                 <span class="slider"></span>
+                 <span class="switch-label"></span>
+                </label>
+            </li>
+        </ul>
+    </nav>
+	<div class="container">
+
+        <h1>Gemeinsam NmP</h1>
+        <table id="wordTable">
+            <thead>
+                <tr>
+                    <th>Nomen mit Praposition</th>
+                    <th>Verb/Bedeutung </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>die Abhängigkeit von</td>
+                    <td>abhängen von</td>
+                </tr>
+                <tr>
+                    <td>die Aggressivität zu/gegen</td>
+                    <td>sich aggressiv zu/gegen verhalten</td>
+                </tr>
+                <tr>
+                    <td>die Angewiesenheit auf</td>
+                    <td>angewiesen sein auf</td>
+                </tr>
+                <tr>
+                    <td>die Anwesenheit bei</td>
+                    <td>anwesend sein bei</td>
+                </tr>
+                <tr>
+                    <td>der Ärger auf/über</td>
+                    <td>sich ärgern über</td>
+                </tr>
+                <tr>
+                    <td>die Armut an</td>
+                    <td>arm sein an</td>
+                </tr>
+                <tr>
+                    <td>die Begeisterung von</td>
+                    <td>begeistert sein von</td>
+                </tr>
+                <tr>
+                    <td>die Bekanntheit bei/für</td>
+                    <td>bekannt sein bei/für</td>
+                </tr>
+                <tr>
+                    <td>die Beliebtheit bei</td>
+                    <td>beliebt sein bei</td>
+                </tr>
+                <tr>
+                    <td>die Bereitschaft zu</td>
+                    <td>bereit sein zu</td>
+                </tr>
+                <tr>
+                    <td>der Bericht über</td>
+                    <td>berichten über</td>
+                </tr>
+                <tr>
+                    <td>die Beruhigung über</td>
+                    <td>sich beruhigen</td>
+                </tr>
+                <tr>
+                    <td>die Berühmtheit für</td>
+                    <td>berühmt sein für</td>
+                </tr>
+                <tr>
+                    <td>die Beschäftigung mit/bei</td>
+                    <td>sich beschäftigen mit/beschäftigt sein bei</td>
+                </tr>
+                <tr>
+                    <td>die Beteiligung an</td>
+                    <td>sich beteiligen an</td>
+                </tr>
+                <tr>
+                    <td>die Beunruhigung über</td>
+                    <td>sich beunruhigen über</td>
+                </tr>
+                <tr>
+                    <td>die Bezeichnung für/als</td>
+                    <td>bezeichnen als</td>
+                </tr>
+                <tr>
+                    <td>die Dankbarkeit für</td>
+                    <td>dankbar sein für</td>
+                </tr>
+                <tr>
+                    <td>die Eifersucht auf</td>
+                    <td>eifersüchtig sein auf</td>
+                </tr>
+                <tr>
+                    <td>die Eignung zu/für</td>
+                    <td>sich eignen zu/für</td>
+                </tr>
+                <tr>
+                    <td>das Einverständnis mit</td>
+                    <td>einverstanden sein mit</td>
+                </tr>
+                <tr>
+                    <td>die Empörung über</td>
+                    <td>sich empören über</td>
+                </tr>
+                <tr>
+                    <td>die Entfernung von</td>
+                    <td>entfernt sein von</td>
+                </tr>
+                <tr>
+                    <td>die Entscheidung für/gegen/über</td>
+                    <td>sich entscheiden für</td>
+                </tr>
+                <tr>
+                    <td>die Entschlossenheit zu</td>
+                    <td>entschlossen sein zu</td>
+                </tr>
+                <tr>
+                    <td>das Entsetzen über</td>
+                    <td>entsetzt sein über</td>
+                </tr>
+                <tr>
+                    <td>die Enttäuschung über</td>
+                    <td>enttäuscht sein von</td>
+                </tr>
+                <tr>
+                    <td>die Erfahrung in/mit</td>
+                    <td>erfahren sein in/mit</td>
+                </tr>
+                <tr>
+                    <td>das Erstaunen über</td>
+                    <td>erstaunt sein über</td>
+                </tr>
+                <tr>
+                    <td>die Fähigkeit zu</td>
+                    <td>fähig sein zu</td>
+                </tr>
+                <tr>
+                    <td>die Freiheit von</td>
+                    <td>frei sein von</td>
+                </tr>
+                <tr>
+                    <td>die Freude auf/über</td>
+                    <td>sich freuen auf/über</td>
+                </tr>
+                <tr>
+                    <td>die Freundlichkeit zu/gegenüber</td>
+                    <td>freundlich sein zu</td>
+                </tr>
+                <tr>
+                    <td>die Freundschaft mit/zwischen</td>
+                    <td>befreundet sein mit</td>
+                </tr>
+                <tr>
+                    <td>die Fülle an</td>
+                    <td>vielfältig sein</td>
+                </tr>
+                <tr>
+                    <td>die Gewöhnung an</td>
+                    <td>sich gewöhnen an</td>
+                </tr>
+                <tr>
+                    <td>die Gleichgültigkeit gegenüber</td>
+                    <td>gleichgültig sein</td>
+                </tr>
+                <tr>
+                    <td>das Glück über</td>
+                    <td>glücklich sein über</td>
+                </tr>
+                <tr>
+                    <td>die Heirat mit</td>
+                    <td>heiraten</td>
+                </tr>
+                <tr>
+                    <td>der Hinweis auf</td>
+                    <td>hinweisen auf</td>
+                </tr>
+                <tr>
+                    <td>die Hoffnung auf</td>
+                    <td>hoffen auf</td>
+                </tr>
+                <tr>
+                    <td>der Inhalt von</td>
+                    <td>beinhalten</td>
+                </tr>
+                <tr>
+                    <td>das Interesse an</td>
+                    <td>interessiert sein an</td>
+                </tr>
+                <tr>
+                    <td>die Investition in</td>
+                    <td>investieren in</td>
+                </tr>
+                <tr>
+                    <td>die Konzentration auf</td>
+                    <td>sich konzentrieren auf</td>
+                </tr>
+                <tr>
+                    <td>die Liebe zu</td>
+                    <td>lieben</td>
+                </tr>
+                <tr>
+                    <td>das Misstrauen gegenüber</td>
+                    <td>misstrauen</td>
+                </tr>
+                <tr>
+                    <td>die Müdigkeit von</td>
+                    <td>müde sein von</td>
+                </tr>
+                <tr>
+                    <td>der Neid auf</td>
+                    <td>neidisch sein auf</td>
+                </tr>
+                <tr>
+                    <td>die Neugier auf</td>
+                    <td>neugierig sein auf</td>
+                </tr>
+                <tr>
+                    <td>der Nutzen für</td>
+                    <td>nutzen</td>
+                </tr>
+                <tr>
+                    <td>die Offenheit für</td>
+                    <td>offen sein für</td>
+                </tr>
+                <tr>
+                    <td>der Protest gegen</td>
+                    <td>protestieren gegen</td>
+                </tr>
+                <tr>
+                    <td>die Reaktion auf</td>
+                    <td>reagieren auf</td>
+                </tr>
+                <tr>
+                    <td>der Reichtum an</td>
+                    <td>reich sein an</td>
+                </tr>
+                <tr>
+                    <td>der Schaden für</td>
+                    <td>schaden</td>
+                </tr>
+                <tr>
+                    <td>die Schuld an</td>
+                    <td>schuld sein an</td>
+                </tr>
+                <tr>
+                    <td>die Spannung auf</td>
+                    <td>gespannt sein auf</td>
+                </tr>
+                <tr>
+                    <td>die Spezialisierung auf</td>
+                    <td>sich spezialisieren auf</td>
+                </tr>
+                <tr>
+                    <td>der Stolz auf</td>
+                    <td>stolz sein auf</td>
+                </tr>
+                <tr>
+                    <td>die Suche nach</td>
+                    <td>suchen nach</td>
+                </tr>
+                <tr>
+                    <td>die Teilnahme an</td>
+                    <td>teilnehmen an</td>
+                </tr>
+                <tr>
+                    <td>die Tendenz zu</td>
+                    <td>tendieren zu</td>
+                </tr>
+                <tr>
+                    <td>die Trauer über</td>
+                    <td>trauern über</td>
+                </tr>
+                <tr>
+                    <td>der Traum von</td>
+                    <td>träumen von</td>
+                </tr>
+                <tr>
+                    <td>die Traurigkeit über</td>
+                    <td>traurig sein über</td>
+                </tr>
+                <tr>
+                    <td>die Überzeugung von</td>
+                    <td>überzeugt sein von</td>
+                </tr>
+                <tr>
+                    <td>die Unabhängigkeit von</td>
+                    <td>unabhängig sein von</td>
+                </tr>
+                <tr>
+                    <td>die Unannehmlichkeit für</td>
+                    <td>unangenehm sein für</td>
+                </tr>
+                <tr>
+                    <td>die Unbeliebtheit bei</td>
+                    <td>unbeliebt sein bei</td>
+                </tr>
+                <tr>
+                    <td>die Unerfahrenheit in</td>
+                    <td>unerfahren sein in</td>
+                </tr>
+                <tr>
+                    <td>die Unfreundlichkeit zu</td>
+                    <td>unfreundlich sein zu</td>
+                </tr>
+                <tr>
+                    <td>die Unglücklichkeit über</td>
+                    <td>unglücklich sein über</td>
+                </tr>
+                <tr>
+                    <td>die Unschuld an</td>
+                    <td>unschuldig sein an</td>
+                </tr>
+                <tr>
+                    <td>die Unterteilung in</td>
+                    <td>unterteilen in</td>
+                </tr>
+                <tr>
+                    <td>die Unzufriedenheit mit</td>
+                    <td>unzufrieden sein mit</td>
+                </tr>
+                <tr>
+                    <td>die Verantwortlichkeit für</td>
+                    <td>zuständig sein für</td>
+                </tr>
+                <tr>
+                    <td>die Verantwortung für</td>
+                    <td>verantwortlich sein für</td>
+                </tr>
+                <tr>
+                    <td>die Verpflichtung zu/für</td>
+                    <td>verpflichten zu/für</td>
+                </tr>
+                <tr>
+                    <td>das Vertrauen auf/in</td>
+                    <td>vertrauen auf/in</td>
+                </tr>
+                <tr>
+                    <td>die Verwunderung über</td>
+                    <td>verwundert sein über</td>
+                </tr>
+                <tr>
+                    <td>die Vorbereitung auf</td>
+                    <td>vorbereiten auf</td>
+                </tr>
+                <tr>
+                    <td>die Werbung für</td>
+                    <td>werben für</td>
+                </tr>
+                <tr>
+                    <td>die Wichtigkeit für</td>
+                    <td>wichtig sein für</td>
+                </tr>
+                <tr>
+                    <td>die Wirkung auf</td>
+                    <td>wirken auf</td>
+                </tr>
+                <tr>
+                    <td>die Wut auf/über</td>
+                    <td>wütend sein auf/über</td>
+                </tr>
+                <tr>
+                    <td>die Zufriedenheit mit</td>
+                    <td>zufrieden sein mit</td>
+                </tr>
+                <tr>
+                    <td>der Zweifel an</td>
+                    <td>zweifeln an</td>
+                </tr>
+                <tr>
+                    <td>eine Bedingung stellen an</td>
+                    <td>etwas fordern</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer>
+        <p>&copy; <a href="https://t.me/shur_shun">shur_shun</a> .</p>
+    </footer>
+
+	<script src="js/main.min.js"></script>
+</body>
+</html>
